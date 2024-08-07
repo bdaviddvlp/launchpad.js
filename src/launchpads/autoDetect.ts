@@ -3,6 +3,7 @@ import { allDeviceNames } from '../internal/utils.js';
 import { ILaunchpad } from './base/ILaunchpad.js';
 import { LaunchpadMK2 } from './MK2/LaunchpadMK2.js';
 import { LaunchpadMK3 } from './MK3/LaunchpadMK3.js';
+import { LaunchpadS } from './S/LaunchpadS.js';
 
 export interface AutoDetectOptions {
 
@@ -31,6 +32,10 @@ export function autoDetect(options?: AutoDetectOptions): ILaunchpad {
 
   if (canFindBoth(LaunchpadMK3.DEFAULT_DEVICE_NAME)) {
     return new LaunchpadMK3(options);
+  }
+
+  if (canFindBoth(LaunchpadS.DEFAULT_DEVICE_NAME)) {
+    return new LaunchpadS(options);
   }
 
   throw new Error(`Did not find supported Launchpads among MIDI devices: ${inputNames.join(', ') || '(none)'}`);
