@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/duncte123/launchpad.js.git"
+    "url": "git+https://github.com/bdaviddvlp/launchpad.js.git"
   },
   "keywords": [
     "launchpad.py",
@@ -22,12 +22,6 @@
     "novation",
     "lp"
   ],
-  "author": "Duncan Sterken",
-  "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/duncte123/launchpad.js/issues"
-  },
-  "homepage": "https://github.com/duncte123/launchpad.js#readme",
   "files": [
     "dist/"
   ],
